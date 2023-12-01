@@ -35,7 +35,7 @@
     "nyc": "^15.1.0",
     "sinon": "^17.0.1",
     "sinon-chai": "^3.7.0",
-    "webextensions-jsdom": "^0.18.1"
+    "webextensions-jsdom": "^1.4.1"
   },
   "dependencies": {
     "eslint-plugin-no-unsanitized": "^4.0.2"
