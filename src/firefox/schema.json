@@ -1,0 +1,57 @@
+[
+  {
+    "namespace": "experiments.firefox_launch",
+    "description": "APIs supporting firefox_launch",
+    "functions": [
+      {
+        "name": "getAvailableBrowsers",
+        "type": "function",
+        "async": true,
+        "description": "Gets list of available browsers",
+        "parameters": []
+      },
+      {
+        "name": "getDefaultBrowser",
+        "type": "function",
+        "async": true,
+        "description": "Gets default browser",
+        "parameters": []
+      },
+      {
+        "name": "launchApp",
+        "type": "function",
+        "async": false,
+        "description": "Launches chosen app passed in",
+        "parameters": [
+          {
+            "name": "appExecutable",
+            "type": "string",
+            "description": "The path of the app to launch"
+          },
+          {
+            "name": "handlerArgs",
+            "type": "array",
+            "description": "Array of arguments for the launched app",
+            "items": {
+              "type": "string",
+              "description": "Argument for the app"
+            }
+          }
+        ]
+      },
+      {
+        "name": "openPrivilegedUrl",
+        "type": "function",
+        "async": false,
+        "description": "Opens a privileged URL in the browser",
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string",
+            "description": "The URL to open"
+          }
+        ]
+      }
+    ]
+  }
+]

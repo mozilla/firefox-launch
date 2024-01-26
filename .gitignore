@@ -1,0 +1,8 @@
+.DS_STORE
+node_modules/
+.nyc_output/
+coverage/
+build/
+dist/
+.venv/
+src/shared/generated/

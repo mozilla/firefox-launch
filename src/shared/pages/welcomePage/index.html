@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Firefox Launch Extension</title>
+    <script src="script.bundle.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <image id="mozilla-logo" src="images/mozilla-logo.svg" />
+    <div class="error-notification" id="error-notification">
+      <p data-locale="welcomePageNoExternalBrowserError"></p>
+      <img src="images/close.svg" class="close-button" id="close-button"/>
+    </div>
+    <div class="welcome-content">
+      <image id="welcome-image" src="images/splash.svg" />
+      <div class="welcome-info">
+        <div class="welcome-header">
+          <h1 data-locale="welcomePageTitle"></h1>
+          <span data-locale="welcomePageBeta"></span>
+        </div>
+
+        <h2 data-locale="welcomePageSubtitle"></h2>
+        <image id="welcome-image-mobile" src="images/splash.svg" />
+        <p data-locale="welcomePageDescription"></p>
+
+        <div class="browser-list firefox" id="browser-list-container">
+          <label
+            data-locale="welcomePageBrowserSelector"
+            for="browser-select"
+          ></label>
+          <br />
+          <select id="browser-select"> </select>
+        </div>
+
+        <div class="always-private chromium">
+          <div class="always-private-checkbox-container">
+            <label class="switch">
+              <input type="checkbox" id="always-private-checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <label
+            data-locale="welcomePageAlwaysPrivateCheckbox"
+            for="always-private-checkbox"
+          >
+          </label>
+        </div>
+
+        <div class="telemetry">
+          <div class="telemetry-checkbox-container">
+            <label class="switch">
+              <input type="checkbox" id="telemetry-checkbox" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <label
+            data-locale="welcomePageTelemetryCheckbox"
+            for="telemetry-checkbox"
+          ></label>
+        </div>
+
+        <div class="shortcuts" id="shortcuts-container">
+          <h3 data-locale="welcomePageShortcutTitle">Shortcuts</h3>
+          <div id="shortcuts-list"></div>
+          <p data-locale="welcomePageManageShortcuts"></p>
+        </div>
+
+        <p data-locale="welcomePageTry"></p>
+      </div>
+    </div>
+  </body>
+</html>

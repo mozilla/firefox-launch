@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.entry {
+  margin-bottom: 10px;
+}
+.entry input[type="text"] {
+  width: 250px;
+  padding: 5px;
+  border: none;
+}
+.error {
+  color: red;
+}

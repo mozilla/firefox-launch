@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Firefox Sites</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>My Firefox Sites</h1>
+    <h2>Configure websites and pages that automatically launch in Firefox</h2>
+    <p>
+      Use the list below to manage the web pages you always browse with Firefox,
+      and would like to open in Firefox automatically whenever you type an
+      address, click a [bookmark/favorite], click on a link, or even when [name
+      of browser] is launched. You can choose to launch Firefox for an entire
+      website, a specific URL, or even make more complicated rules using an
+      asterisk (*) as a wildcard character. For any given entry you can also
+      choose whether the website or page opens in Firefox or Firefox Private
+      Browsing. Note that URLs that match two entries, one which is set to open
+      in Firefox Private Browsing and one which is not, will open in a private
+      window.
+    </p>
+
+    <div class="entry" id="newEntry">
+      <label for="url">https://</label>
+      <input type="text" id="url" placeholder="*.example.com/*" />
+      <input type="checkbox" id="privateBrowsing" />
+      <label for="privateBrowsing" title="Launch with Firefox Private Browsing"
+        >Private Browsing</label
+      >
+      <button id="save">Save</button>
+    </div>
+
+    <div id="entryList">
+    </div>
+  </body>
+</html>

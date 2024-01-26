@@ -1,0 +1,154 @@
+$schema: moz://mozilla.org/schemas/glean/metrics/2-0-0
+
+install_event:
+  date_installed:
+    type: datetime
+    lifetime: ping
+    send_in_pings:
+      - install
+    description: |
+      The date and time the extension was installed and launched for the first time
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  browser_type:
+    type: string
+    lifetime: ping
+    send_in_pings:
+      - install
+    description: |
+      The name of the browser the extension is running on
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+startup_event:
+  date_started:
+    type: datetime
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      The date and time the extension was started up
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  browser_type:
+    type: string
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      The name of the browser the extension is running on
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  browser_language_locale:
+    type: string
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      The user's preferred language of the browser
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  extension_language_locale:
+    type: string
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      The language of the extension
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  is_pinned:
+    type: boolean
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      Whether or not the action button is pinned to the toolbar
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+  hotkeys:
+    type: labeled_string
+    lifetime: ping
+    send_in_pings:
+      - startup
+    description: |
+      Which hotkeys are set for each command
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+launch_event: 
+  browser_launch:
+    type: event
+    lifetime: ping
+    send_in_pings:
+      - launch
+    description: |
+      The user launched the browser from the action button
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+    extra_keys:
+      browser:
+        description: The browser that was launched
+        type: string
+      source:
+        description: Where the browser was launched from
+        type: string
+setting_event:
+  current_browser:
+    type: labeled_string
+    lifetime: ping
+    send_in_pings:
+      - settings
+    description: The external browser has been changed
+    bugs:
+      - https://linktobugs.page
+    data_reviews:
+      - https://linktodatareviews.page
+    notification_emails:
+      - gsherman@mozilla.com
+    expires: never
+
+

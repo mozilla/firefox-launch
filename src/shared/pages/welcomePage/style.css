@@ -1,0 +1,206 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: large;
+  line-height: 1.4;
+}
+
+h1,
+h2 {
+  font-family: "Metropolis", sans-serif;
+}
+
+h2,
+p,
+label,
+span {
+  font-weight: lighter;
+}
+
+#mozilla-logo {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+/* Error Notification Styling */
+.error-notification {
+  display: none;
+  position: relative;
+  background-color: #FFEA80;
+  max-width: fit-content;
+  min-height: 40px;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.24);
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.error-notification.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.error-notification .close-button {
+  padding: 8px;
+  cursor: pointer;
+  background-color: #FFD567;
+  margin-left: auto;
+  margin-bottom: auto;
+}
+
+
+.error-notification p {
+  margin: 0;
+  padding: 10px 50px;
+  font-size: 0.8em;
+  font-weight:bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Start of content styling */
+.welcome-content {
+  display: flex;
+  padding: 60px;
+  align-items: center;
+}
+
+#welcome-image {
+  min-width: 40%;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+#welcome-image-mobile {
+  display: none;
+}
+
+.welcome-info {
+  min-width: 60%;
+}
+
+/* Mobile & Small Screen Styling */
+@media (max-width: 768px) {
+  .welcome-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #welcome-image {
+    display: none;
+  }
+
+  #welcome-image-mobile {
+    display: block;
+    max-width: 50%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Title and Beta Styling */
+.welcome-header {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-header span {
+  border-radius: 8px;
+  border: #cfcfd8 solid 2px;
+  font-weight: lighter;
+  padding: 12px;
+  margin-left: 10px;
+}
+
+/* Subtitle Styling */
+.welcome-info h2 {
+  margin-top: 0px;
+}
+
+/* Browser List Styling (Firefox only) */
+.browser-list label {
+  font-weight: 600;
+  font-size: 0.7em;
+  margin-bottom: 20px;
+}
+
+.browser-list select {
+  width: 55%;
+  max-width: 400px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* Telemetry Styling (Both) and Always Private Styling (Chromium Only) */
+.telemetry,
+.always-private {
+  display: flex;
+  margin-top: 20px;
+}
+
+.telemetry-checkbox-container,
+.always-private-checkbox-container {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+/* Shortcuts List Styling */
+#shortcuts-list {
+  margin-top: -20px;
+}
+
+/* Slider Styling */
+.switch {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #cdcdd4;
+  transition: 0.4s;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 6px;
+  bottom: 6px;
+  top: 6px;
+  background-color: #ffffff;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0060df;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

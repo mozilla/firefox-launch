@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "Firefox in Firefox",
+  "description": "Easily hop from Firefox to another browser when you want to use a specific feature or keep your browsing separate.",
+  "version": "0.1",
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage",
+    "notifications",
+    "declarativeNetRequest",
+    "webRequest"
+  ],
+  "background": {
+    "scripts": ["background.bundle.js"],
+    "type": "module"
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "images/firefox-launch/32.png"
+    }
+  },
+  "commands": {
+    "launchBrowser": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Open Site in your Selected Browser"
+    }
+  },
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "firefox-launch@mozilla.com"
+    }
+  },
+  "experiment_apis": {
+    "experiments_firefox_launch": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "experiments",
+            "firefox_launch"
+          ]
+        ],
+        "script": "api.js"
+      }
+    }
+  }
+}
